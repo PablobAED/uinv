@@ -1,0 +1,16 @@
+{
+    "interruptInfo" : [
+        {
+            "interruptName": "INT_ADC_B_1",
+            "interruptHandler": "ISR2"
+        },
+        {
+            "interruptName": "INT_ADC_C_1",
+            "interruptHandler": "ISR1"
+        },
+        {
+            "interruptName": "INT_DCAC",
+            "interruptHandler": "ISR3"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?ccsproject version="1.0"?>
+<projectOptions>
+	<ccsVariant value="50:Theia-based"/>
+	<ccsVersion value="51.5.0"/>
+	<deviceFamily value="C2000"/>
+	<createSlaveProjects value=""/>
+	<templateProperties value="id=uinv_f280039c_nonpowerSUITE.projectspec.uinv_F280039C"/>
+	<sourceLookupPath value="${C2000WARE_DLIB_ROOT}"/>
+	<origin value="C:\ti\C2000Ware_DigitalPower_SDK_5_03_00_00\solutions\tida_010933\f28003x\ccs\uinv_f280039c_nonpowerSUITE.projectspec"/>
+	<filesToOpen value=""/>
+	<connection value="common/targetdb/connections/TIXDS100v2_Connection.xml"/>
+	<activeTargetConfiguration value="targetConfigs/TMS320F280039C.ccxml"/>
+	<isTargetConfigurationManual value="false"/>
+</projectOptions>

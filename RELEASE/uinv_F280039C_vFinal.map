@@ -1,0 +1,1623 @@
+******************************************************************************
+             TMS320C2000 Linker PC v22.6.1                     
+******************************************************************************
+>> Linked Fri Nov 29 15:49:47 2024
+
+OUTPUT FILE NAME:   <uinv_F280039C_vFinal.out>
+ENTRY POINT SYMBOL: "code_start"  address: 00080000
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  RAMM0                 00000128   000002d8  00000000  000002d8  RWIX
+  RAMM1                 00000400   000003f8  00000200  000001f8  RWIX
+  CLATOCPU_MSGRAM       00001480   00000080  00000000  00000080  RWIX
+  CPUTOCLA_MSGRAM       00001500   00000080  00000000  00000080  RWIX
+  CLATODMA_MSGRAM       00001680   00000080  00000000  00000080  RWIX
+  DMATOCLA_MSGRAM       00001700   00000080  00000000  00000080  RWIX
+  RAMLS0                00008000   00000800  00000000  00000800  RWIX
+  RAMLS1                00008800   00000800  000007fa  00000006  RWIX
+  RAMLS2                00009000   00000800  000007ec  00000014  RWIX
+  RAMLS3                00009800   00000800  000007d0  00000030  RWIX
+  RAMLS4                0000a000   00000800  00000676  0000018a  RWIX
+  RAMLS5                0000a800   00000800  000007bd  00000043  RWIX
+  RAMLS6                0000b000   00000800  00000344  000004bc  RWIX
+  RAMLS7                0000b800   00000800  00000000  00000800  RWIX
+  RAMGS0                0000c000   00001000  00000000  00001000  RWIX
+  RAMGS1                0000d000   00001000  0000018e  00000e72  RWIX
+  RAMGS2                0000e000   00001000  0000002f  00000fd1  RWIX
+  RAMGS3                0000f000   00000ff8  00000e95  00000163  RWIX
+  FLASH_BANK0_SEC0      00080000   00001000  00000016  00000fea  RWIX
+  FLASH_BANK0_SEC1      00081000   00001000  00000f4b  000000b5  RWIX
+  FLASH_BANK0_SEC2      00082000   00001000  00001000  00000000  RWIX
+  FLASH_BANK0_SEC3      00083000   00001000  00001000  00000000  RWIX
+  FLASH_BANK0_SEC4      00084000   00001000  00001000  00000000  RWIX
+  FLASH_BANK0_SEC5      00085000   00001000  00001000  00000000  RWIX
+  FLASH_BANK0_SEC6      00086000   00001000  00000ad9  00000527  RWIX
+  FLASH_BANK0_SEC7      00087000   00001000  0000002f  00000fd1  RWIX
+  FLASH_BANK0_SEC8      00088000   00001000  00000000  00001000  RWIX
+  FLASH_BANK0_SEC9      00089000   00001000  00000000  00001000  RWIX
+  FLASH_BANK0_SEC10     0008a000   00001000  00000000  00001000  RWIX
+  FLASH_BANK0_SEC11     0008b000   00001000  00000000  00001000  RWIX
+  FLASH_BANK0_SEC12     0008c000   00001000  00000000  00001000  RWIX
+  FLASH_BANK0_SEC13     0008d000   00001000  00000000  00001000  RWIX
+  FLASH_BANK0_SEC14     0008e000   00001000  00000000  00001000  RWIX
+  FLASH_BANK0_SEC15     0008f000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC0      00090000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC1      00091000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC2      00092000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC3      00093000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC4      00094000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC5      00095000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC6      00096000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC7      00097000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC8      00098000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC9      00099000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC10     0009a000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC11     0009b000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC12     0009c000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC13     0009d000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC14     0009e000   00001000  00000000  00001000  RWIX
+  FLASH_BANK1_SEC15     0009f000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC0      000a0000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC1      000a1000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC2      000a2000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC3      000a3000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC4      000a4000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC5      000a5000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC6      000a6000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC7      000a7000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC8      000a8000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC9      000a9000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC10     000aa000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC11     000ab000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC12     000ac000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC13     000ad000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC14     000ae000   00001000  00000000  00001000  RWIX
+  FLASH_BANK2_SEC15     000af000   00000ff0  00000000  00000ff0  RWIX
+  RESET                 003fffc0   00000002  00000000  00000002  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.reset     0    003fffc0    00000000     DSECT
+
+.stack     0    00000400    00000200     UNINITIALIZED
+                  00000400    00000200     --HOLE--
+
+.bss.1     0    00008800    000007fa     UNINITIALIZED
+                  00008800    00000640     uinv_dcac.obj (.bss:uINV_DCAC_dBuff5)
+                  00008e40    00000182     uinv_dcac.obj (.bss)
+                  00008fc2    00000038     uinv_comms.obj (.bss)
+
+.bss.2     0    00009000    000007ec     UNINITIALIZED
+                  00009000    00000640     uinv_dcac.obj (.bss:uINV_DCAC_dBuff6)
+                  00009640    000000c8     uinv_dcac.obj (.bss:uINV_DCAC_dBuff1)
+                  00009708    000000c8     uinv_dcac.obj (.bss:uINV_DCAC_dBuff2)
+                  000097d0    0000001c     uinv_main.obj (.bss)
+
+.bss.3     0    00009800    000007d0     UNINITIALIZED
+                  00009800    00000640     uinv_dcac.obj (.bss:uINV_DCAC_dBuff7)
+                  00009e40    000000c8     uinv_dcac.obj (.bss:uINV_DCAC_dBuff3)
+                  00009f08    000000c8     uinv_dcac.obj (.bss:uINV_DCAC_dBuff4)
+
+.bss.4     0    0000a000    00000676     UNINITIALIZED
+                  0000a000    00000640     uinv_dcac.obj (.bss:uINV_DCAC_dBuff8)
+                  0000a640    00000036     uinv_dcac.obj (.bss:retain)
+
+.bss.5     0    0000a800    00000320     UNINITIALIZED
+                  0000a800    00000320     uinv_main.obj (.bss:vctrl_array)
+
+.bss.6     0    0000ab40    00000426     UNINITIALIZED
+                  0000ab40    00000226     uinv_dcdc.obj (.bss:retain)
+                  0000ad66    00000200     uinv_comms.obj (.bss:message)
+
+.data.1    0    0000af80    00000039     UNINITIALIZED
+                  0000af80    00000030     uinv_dcdc.obj (.data:retain)
+                  0000afb0    00000006     rts2800_fpu32_eabi.lib : exit.c.obj (.data)
+                  0000afb6    00000002                            : _lock.c.obj (.data:_lock)
+                  0000afb8    00000001                            : errno.c.obj (.data)
+
+.data.2    0    0000afc0    0000003e     UNINITIALIZED
+                  0000afc0    00000022     uinv_comms.obj (.data)
+                  0000afe2    0000001c     uinv_dcac.obj (.data:retain)
+
+.bss.7     0    0000b000    00000200     UNINITIALIZED
+                  0000b000    00000200     uinv_comms.obj (.bss:output_string)
+
+.data.3    0    0000b200    00000132     UNINITIALIZED
+                  0000b200    00000116     uinv_dcac.obj (.data)
+                  0000b316    0000001c     uinv_dcdc.obj (.data)
+
+.data.4    0    0000b340    00000012     UNINITIALIZED
+                  0000b340    00000012     uinv_main.obj (.data)
+
+codestart 
+*          0    00080000    00000002     
+                  00080000    00000002     f28003x_codestartbranch.obj (codestart)
+
+.binit     0    00080008    00000014     
+                  00080008    00000014     (.binit)
+
+.TI.ramfunc 
+*          0    00081000    00000e95     RUN ADDR = 0000f000
+                  00081000    0000076e     uinv_main.obj (.TI.ramfunc:ISR2)
+                  0008176e    000006e6     uinv_main.obj (.TI.ramfunc:ISR1)
+                  00081e54    0000003d     uinv_main.obj (.TI.ramfunc:ISR3)
+                  00081e91    00000004     driverlib.lib : sysctl.obj (.TI.ramfunc)
+
+.cinit     0    00081e98    000000b6     
+                  00081e98    00000023     (.cinit..data.1.load) [load image, compression = lzss]
+                  00081ebb    00000021     (.cinit..data.2.load) [load image, compression = lzss]
+                  00081edc    0000001d     (.cinit..data.3.load) [load image, compression = lzss]
+                  00081ef9    00000006     (.cinit..data.4.load) [load image, compression = lzss]
+                  00081eff    00000001     --HOLE-- [fill = 0]
+                  00081f00    00000006     (__TI_handler_table)
+                  00081f06    00000004     (.cinit..bss.1.load) [load image, compression = zero_init]
+                  00081f0a    00000004     (.cinit..bss.2.load) [load image, compression = zero_init]
+                  00081f0e    00000004     (.cinit..bss.3.load) [load image, compression = zero_init]
+                  00081f12    00000004     (.cinit..bss.4.load) [load image, compression = zero_init]
+                  00081f16    00000004     (.cinit..bss.5.load) [load image, compression = zero_init]
+                  00081f1a    00000004     (.cinit..bss.6.load) [load image, compression = zero_init]
+                  00081f1e    00000004     (.cinit..bss.7.load) [load image, compression = zero_init]
+                  00081f22    0000002c     (__TI_cinit_table)
+
+.init_array 
+*          0    00081000    00000000     UNINITIALIZED
+
+.const     0    00084000    00000340     
+                  00084000    00000101     rts2800_fpu32_eabi.lib : ctype.c.obj (.const:.string:_ctypes_)
+                  00084101    00000001     --HOLE-- [fill = 0]
+                  00084102    000000d8     uinv_comms.obj (.const:.string)
+                  000841da    0000008a     uinv_main.obj (.const:.string)
+                  00084264    00000089     <whole-program> (.const:.string)
+                  000842ed    00000001     --HOLE-- [fill = 0]
+                  000842ee    00000026     rts2800_fpu32_eabi.lib : _printfi.c.obj (.const:.string)
+                  00084314    0000001c                            : _printfi.c.obj (.const)
+                  00084330    00000010     <whole-program> (.const)
+
+FPUmathTables 
+*          0    00086000    0000018e     RUN ADDR = 0000d000
+                  00086000    000000d0     rts2800_fpu32_fast_supplement_eabi.lib : logtable_f32.obj (FPUmathTables)
+                  000860d0    000000be                                            : exptable_f32.obj (FPUmathTables)
+
+dclfuncs   0    00087000    0000002f     RUN ADDR = 0000e000
+                  00087000    0000002f     DCL_DF22_C1.obj (dclfuncs)
+
+.text.1    0    00082000    00001000     
+                  00082000    00000961     board.obj (.text:EPWM_init)
+                  00082961    00000614     rts2800_fpu32_eabi.lib : _printfi.c.obj (.text:__TI_printfi)
+                  00082f75    0000008b     board.obj (.text:myECAP0_init)
+
+.text.2    0    00083000    00001000     
+                  00083000    000006c2     rts2800_fpu32_eabi.lib : _printfi.c.obj (.text)
+                  000836c2    000003a1     board.obj (.text:SYSCTL_init)
+                  00083a63    00000308     uinv_dcac.obj (.text:uINV_DCAC_GlobalVariablesInit)
+                  00083d6b    0000023a     uinv_dcdc.obj (.text:uINV_DCDC_init_boost$4)
+                  00083fa5    0000005a     rts2800_fpu32_eabi.lib : s_frexp.c.obj (.text)
+                  00083fff    00000001     c2000ware_libraries.obj (.text:C2000Ware_libraries_init)
+
+.text.3    0    00084340    00000cc0     
+                  00084340    000001e1     board.obj (.text:PinMux_init)
+                  00084521    000001c0     uinv_dcdc.obj (.text:uINV_DCDC_test)
+                  000846e1    00000133     uinv_main.obj (.text:A1)
+                  00084814    0000011d     driverlib.lib : sysctl.obj (.text:SysCtl_setClock)
+                  00084931    00000107     rts2800_fpu32_eabi.lib : ll_div28.asm.obj (.text)
+                  00084a38    00000107     uinv_dcac.obj (.text:uINV_DCAC_GaN_temp)
+                  00084b3f    000000ed     uinv_comms.obj (.text:uINV_StartConverters)
+                  00084c2c    000000e9     driverlib.lib : sysctl.obj (.text:SysCtl_isPLLValid)
+                  00084d15    000000e9     uinv_dcdc.obj (.text:uINV_DCDC_init_protection$4)
+                  00084dfe    000000e3     board.obj (.text:GPIO_init)
+                  00084ee1    000000ce     uinv_comms.obj (.text:solar_uinverter_to_string)
+                  00084faf    0000004b     uinv_comms.obj (.text:uINV_comms_init)
+                  00084ffa    00000006     rts2800_fpu32_eabi.lib : copy_zero_init.c.obj (.text:decompress:ZI)
+
+.text.4    0    00085000    00001000     
+                  00085000    000000cb     uinv_dcac.obj (.text:uINV_DCAC_test)
+                  000850cb    000000c8     board.obj (.text:ADC_B_init)
+                  00085193    000000c5     uinv_comms.obj (.text:uINV_comms_update_data)
+                  00085258    000000c0     board.obj (.text:ADC_C_init)
+                  00085318    000000b7     uinv_comms.obj (.text:checkPanels_ON_OFF)
+                  000853cf    000000ac     rts2800_fpu32_eabi.lib : s_scalbn.c.obj (.text)
+                  0008547b    000000a0     rts2800_fpu32_fast_supplement_eabi.lib : pow_f32.obj (.text)
+                  0008551b    0000009c     rts2800_fpu32_eabi.lib : fd_add28.asm.obj (.text)
+                  000855b7    00000099     board.obj (.text:CMPSS_SR_init)
+                  00085650    00000092     uinv_main.obj (.text:uINV_DCAC_pll_run)
+                  000856e2    00000090     uinv_comms.obj (.text:uINV_Check)
+                  00085772    0000008e     board.obj (.text:ADC_A_init)
+                  00085800    0000008e     board.obj (.text:Board_init)
+                  0008588e    0000008b     rts2800_fpu32_eabi.lib : fd_div28.asm.obj (.text)
+                  00085919    00000088                            : fs_div28.asm.obj (.text)
+                  000859a1    00000087     board.obj (.text:myCMPSS_init)
+                  00085a28    00000087     uinv_dcac.obj (.text:uINV_DCAC_Init)
+                  00085aaf    00000083     rts2800_fpu32_eabi.lib : fd_mpy28.asm.obj (.text)
+                  00085b32    00000083     uinv_comms.obj (.text:uINV_StopBoost)
+                  00085bb5    00000072     uinv_dcac.obj (.text:computeDF22_PRcontrollerCoeff)
+                  00085c27    0000006e     uinv_dcac.obj (.text:computeDF22_NotchFltrCoeff)
+                  00085c95    00000069     board.obj (.text:SCI_COMMS_init)
+                  00085cfe    00000069     uinv_main.obj (.text:main)
+                  00085d67    00000060     rts2800_fpu32_eabi.lib : s_tanf.c.obj (.text)
+                  00085dc7    0000005c     device.obj (.text:Device_init)
+                  00085e23    00000059     driverlib.lib : sysctl.obj (.text:SysCtl_getClock)
+                  00085e7c    00000055     uinv_dcdc.obj (.text:uINV_DCDC_fail)
+                  00085ed1    00000045     driverlib.lib : gpio.obj (.text:GPIO_setAnalogMode)
+                  00085f16    00000045                   : sysctl.obj (.text:SysCtl_selectXTAL)
+                  00085f5b    00000043     board.obj (.text:EPWM_setActionQualifierAction$0)
+                  00085f9e    00000042     uinv_dcdc.obj (.text:init_boost_pi_i$4)
+                  00085fe0    00000020     driverlib.lib : gpio.obj (.text:GPIO_setDirectionMode)
+
+.text.5    0    00086190    0000094b     
+                  00086190    00000042     uinv_main.obj (.text:init_boost_pi_i)
+                  000861d2    00000041     driverlib.lib : interrupt.obj (.text:Interrupt_initModule)
+                  00086213    00000041     uinv_dcdc.obj (.text:init_boost_pi_v$4)
+                  00086254    00000041     uinv_main.obj (.text:init_boost_pi_v)
+                  00086295    0000003f     driverlib.lib : gpio.obj (.text:GPIO_setPadConfig)
+                  000862d4    0000003e                   : sysctl.obj (.text:SysCtl_pollX1Counter)
+                  00086312    0000003b     uinv_comms.obj (.text:uINV_comms_test)
+                  0008634d    0000003a     uinv_comms.obj (.text:uINV_SystemInit)
+                  00086387    00000038     board.obj (.text:EPWM_setTripZoneAction$0)
+                  000863bf    00000038     uinv_comms.obj (.text:uINV_controller_PLC)
+                  000863f7    00000036     driverlib.lib : interrupt.obj (.text:Interrupt_enable)
+                  0008642d    00000034     rts2800_fpu32_eabi.lib : autoinit.c.obj (.text:__TI_auto_init_nopinit)
+                  00086461    00000032                            : sprintf.c.obj (.text)
+                  00086493    00000031                            : atoi.c.obj (.text)
+                  000864c4    00000031     uinv_comms.obj (.text:uINV_StopConversion)
+                  000864f5    00000030     driverlib.lib : gpio.obj (.text:GPIO_setPinConfig)
+                  00086525    00000030     rts2800_fpu32_eabi.lib : copy_decompress_lzss.c.obj (.text:decompress:lzss)
+                  00086555    00000030                            : _ltoa.c.obj (.text)
+                  00086585    00000030                            : cpy_tbl.c.obj (.text)
+                  000865b5    0000002e     uinv_comms.obj (.text:uINV_WaitPanels)
+                  000865e3    0000002d     driverlib.lib : sysctl.obj (.text:SysCtl_selectOscSource)
+                  00086610    0000002b                   : xbar.obj (.text:XBAR_setEPWMMuxConfig)
+                  0008663b    0000002a     rts2800_fpu32_eabi.lib : fd_cmp28.asm.obj (.text)
+                  00086665    0000002a                            : l_div28.asm.obj (.text)
+                  0008668f    00000029                            : exit.c.obj (.text)
+                  000866b8    00000027     board.obj (.text:myCLB0_init)
+                  000866df    00000026     uinv_comms.obj (.text:uINV_comms_send)
+                  00086705    00000024     rts2800_fpu32_eabi.lib : s_copysign.c.obj (.text)
+                  00086729    00000023     driverlib.lib : sci.obj (.text:SCI_setConfig)
+                  0008674c    00000022                   : gpio.obj (.text:GPIO_setControllerCore)
+                  0008676e    00000022                   : gpio.obj (.text:GPIO_setQualificationMode)
+                  00086790    00000022                   : sci.obj (.text:SCI_writeCharArray)
+                  000867b2    00000022     rts2800_fpu32_eabi.lib : i_div28.asm.obj (.text)
+                  000867d4    00000021     driverlib.lib : sysctl.obj (.text:SysCtl_selectXTALSingleEnded)
+                  000867f5    00000021     rts2800_fpu32_eabi.lib : fd_toi28.asm.obj (.text)
+                  00086816    0000001f     driverlib.lib : cmpss.obj (.text:CMPSS_configRamp)
+                  00086835    0000001f     rts2800_fpu32_eabi.lib : fd_tol28.asm.obj (.text)
+                  00086854    0000001e                            : ll_cmp28.asm.obj (.text)
+                  00086872    0000001d                            : i_tofd28.asm.obj (.text)
+                  0008688f    0000001d                            : memcpy.c.obj (.text)
+                  000868ac    0000001c     driverlib.lib : sci.obj (.text:SCI_clearInterruptStatus)
+                  000868c8    0000001c     rts2800_fpu32_eabi.lib : l_tofd28.asm.obj (.text)
+                  000868e4    0000001a     driverlib.lib : adc.obj (.text:ADC_setOffsetTrimAll)
+                  000868fe    00000019                   : adc.obj (.text:ADC_setVREF)
+                  00086917    00000019                   : cmpss.obj (.text:CMPSS_configFilterHigh)
+                  00086930    00000019                   : cmpss.obj (.text:CMPSS_configFilterLow)
+                  00086949    00000018     rts2800_fpu32_eabi.lib : ll_aox28.asm.obj (.text)
+                  00086961    00000017                            : boot28.asm.obj (.text)
+                  00086978    00000017     uinv_dcdc.obj (.text:uINV_DCDC_init)
+                  0008698f    00000015     driverlib.lib : cmpss.obj (.text:CMPSS_configLatchOnPWMSYNC)
+                  000869a4    00000015                   : interrupt.obj (.text:Interrupt_initVectorTable)
+                  000869b9    00000015                   : sysctl.obj (.text:SysCtl_getLowSpeedClock)
+                  000869ce    00000013                   : sysctl.obj (.text:SysCtl_configureType)
+                  000869e1    00000012     board.obj (.text:SysCtl_setPeripheralAccessControl$0)
+                  000869f3    00000010     device.obj (.text:Device_initGPIO)
+                  00086a03    00000010     rts2800_fpu32_eabi.lib : memccpy.c.obj (.text)
+                  00086a13    0000000e                            : fd_sub28.asm.obj (.text)
+                  00086a21    0000000d     driverlib.lib : ecap.obj (.text:ECAP_setEmulationMode)
+                  00086a2e    0000000c                   : interrupt.obj (.text:Interrupt_defaultHandler)
+                  00086a3a    0000000c     rts2800_fpu32_eabi.lib : args_main.c.obj (.text)
+                  00086a46    0000000c                            : strchr.c.obj (.text)
+                  00086a52    0000000b                            : wcslen.c.obj (.text)
+                  00086a5d    0000000a     uinv_main.obj (.text:A0)
+                  00086a67    0000000a     uinv_main.obj (.text:B0)
+                  00086a71    0000000a     driverlib.lib : interrupt.obj (.text:Interrupt_illegalOperationHandler)
+                  00086a7b    0000000a                   : interrupt.obj (.text:Interrupt_nmiHandler)
+                  00086a85    00000009                   : epwm.obj (.text:EPWM_setEmulationMode)
+                  00086a8e    00000009     rts2800_fpu32_eabi.lib : fd_neg28.asm.obj (.text)
+                  00086a97    00000008     uinv_main.obj (.text:B1)
+                  00086a9f    00000008     uinv_main.obj (.text:B2)
+                  00086aa7    00000008     uinv_main.obj (.text:B3)
+                  00086aaf    00000008     rts2800_fpu32_eabi.lib : copy_decompress_none.c.obj (.text:decompress:none)
+                  00086ab7    00000008     f28003x_codestartbranch.obj (.text)
+                  00086abf    00000008     rts2800_fpu32_eabi.lib : strlen.c.obj (.text)
+                  00086ac7    00000007                            : memset.c.obj (.text)
+                  00086ace    00000005                            : strcpy.c.obj (.text)
+                  00086ad3    00000003     device.obj (.text:__error__)
+                  00086ad6    00000002     rts2800_fpu32_eabi.lib : pre_init.c.obj (.text)
+                  00086ad8    00000001     device_cmd.obj (.text:CMD_init)
+                  00086ad9    00000001     rts2800_fpu32_eabi.lib : _lock.c.obj (.text)
+                  00086ada    00000001                            : startup.c.obj (.text)
+
+MODULE SUMMARY
+
+       Module                                   code    ro data   rw data
+       ------                                   ----    -------   -------
+    .\
+       uinv_dcac.obj                            1601    0         7946   
+       uinv_main.obj                            8191    138       846    
+       uinv_comms.obj                           1479    216       1114   
+       uinv_dcdc.obj                            1490    0         626    
+       f28003x_codestartbranch.obj              10      0         0      
+    +--+----------------------------------------+-------+---------+---------+
+       Total:                                   12771   354       10532  
+                                                                         
+    .\libraries\DCL\
+       DCL_DF22_C1.obj                          94      0         0      
+    +--+----------------------------------------+-------+---------+---------+
+       Total:                                   94      0         0      
+                                                                         
+    .\syscfg\
+       board.obj                                5426    0         0      
+       device.obj                               111     0         0      
+       c2000ware_libraries.obj                  1       0         0      
+       device_cmd.obj                           1       0         0      
+    +--+----------------------------------------+-------+---------+---------+
+       Total:                                   5539    0         0      
+                                                                         
+    C:\Users\usuario\AppData\Local\Temp\
+       {CBB3A021-0116-4DB1-AE50-6BD0AF9E95C3}   0       153       0      
+    +--+----------------------------------------+-------+---------+---------+
+       Total:                                   0       153       0      
+                                                                         
+    C:/Users/usuario/OneDrive - Jose Miguel Sanz Alcaine/CodeComposer/workspace_uinv_final_auto/uinv_F280039C_vFinal/device/driverlib/ccs/Release/driverlib.lib
+       sysctl.obj                               864     0         0      
+       gpio.obj                                 280     0         0      
+       interrupt.obj                            172     0         0      
+       cmpss.obj                                102     0         0      
+       sci.obj                                  97      0         0      
+       adc.obj                                  51      0         0      
+       xbar.obj                                 43      0         0      
+       ecap.obj                                 13      0         0      
+       epwm.obj                                 9       0         0      
+    +--+----------------------------------------+-------+---------+---------+
+       Total:                                   1631    0         0      
+                                                                         
+    C:/Users/usuario/OneDrive - Jose Miguel Sanz Alcaine/CodeComposer/workspace_uinv_final_auto/uinv_F280039C_vFinal/libraries/FPUfastRTS/rts2800_fpu32_fast_supplement_eabi.lib
+       logtable_f32.obj                         0       416       0      
+       exptable_f32.obj                         0       380       0      
+       pow_f32.obj                              160     0         0      
+    +--+----------------------------------------+-------+---------+---------+
+       Total:                                   160     796       0      
+                                                                         
+    C:\ti\ccs1280\ccs\tools\compiler\ti-cgt-c2000_22.6.1.LTS\lib\rts2800_fpu32_eabi.lib
+       _printfi.c.obj                           3286    66        0      
+       ll_div28.asm.obj                         263     0         0      
+       ctype.c.obj                              0       257       0      
+       s_scalbn.c.obj                           172     0         0      
+       fd_add28.asm.obj                         156     0         0      
+       fd_div28.asm.obj                         139     0         0      
+       fs_div28.asm.obj                         136     0         0      
+       fd_mpy28.asm.obj                         131     0         0      
+       s_tanf.c.obj                             96      0         0      
+       s_frexp.c.obj                            90      0         0      
+       autoinit.c.obj                           52      0         0      
+       sprintf.c.obj                            50      0         0      
+       atoi.c.obj                               49      0         0      
+       _ltoa.c.obj                              48      0         0      
+       copy_decompress_lzss.c.obj               48      0         0      
+       cpy_tbl.c.obj                            48      0         0      
+       exit.c.obj                               41      0         6      
+       fd_cmp28.asm.obj                         42      0         0      
+       l_div28.asm.obj                          42      0         0      
+       s_copysign.c.obj                         36      0         0      
+       i_div28.asm.obj                          34      0         0      
+       fd_toi28.asm.obj                         33      0         0      
+       fd_tol28.asm.obj                         31      0         0      
+       ll_cmp28.asm.obj                         30      0         0      
+       i_tofd28.asm.obj                         29      0         0      
+       memcpy.c.obj                             29      0         0      
+       l_tofd28.asm.obj                         28      0         0      
+       ll_aox28.asm.obj                         24      0         0      
+       boot28.asm.obj                           23      0         0      
+       memccpy.c.obj                            16      0         0      
+       fd_sub28.asm.obj                         14      0         0      
+       args_main.c.obj                          12      0         0      
+       strchr.c.obj                             12      0         0      
+       wcslen.c.obj                             11      0         0      
+       fd_neg28.asm.obj                         9       0         0      
+       copy_decompress_none.c.obj               8       0         0      
+       strlen.c.obj                             8       0         0      
+       memset.c.obj                             7       0         0      
+       copy_zero_init.c.obj                     6       0         0      
+       strcpy.c.obj                             5       0         0      
+       _lock.c.obj                              1       0         2      
+       pre_init.c.obj                           2       0         0      
+       errno.c.obj                              0       0         1      
+       startup.c.obj                            1       0         0      
+    +--+----------------------------------------+-------+---------+---------+
+       Total:                                   5298    323       9      
+                                                                         
+       Stack:                                   0       0         512    
+       Linker Generated:                        0       201       0      
+    +--+----------------------------------------+-------+---------+---------+
+       Grand Total:                             25493   1827      11053  
+
+
+LINKER GENERATED COPY TABLES
+
+binit @ 00080008 records: 3, size/record: 6, table size: 20
+	.TI.ramfunc: load addr=00081000, load size=00000e95, run addr=0000f000, run size=00000e95, compression=none
+	FPUmathTables: load addr=00086000, load size=0000018e, run addr=0000d000, run size=0000018e, compression=none
+	dclfuncs: load addr=00087000, load size=0000002f, run addr=0000e000, run size=0000002f, compression=none
+__TI_cinit_table @ 00081f22 records: 11, size/record: 4, table size: 44
+	.data.1: load addr=00081e98, load size=00000023 bytes, run addr=0000af80, run size=00000039 bytes, compression=lzss
+	.data.2: load addr=00081ebb, load size=00000021 bytes, run addr=0000afc0, run size=0000003e bytes, compression=lzss
+	.data.3: load addr=00081edc, load size=0000001d bytes, run addr=0000b200, run size=00000132 bytes, compression=lzss
+	.data.4: load addr=00081ef9, load size=00000006 bytes, run addr=0000b340, run size=00000012 bytes, compression=lzss
+	.bss.1: load addr=00081f06, load size=00000004 bytes, run addr=00008800, run size=000007fa bytes, compression=zero_init
+	.bss.2: load addr=00081f0a, load size=00000004 bytes, run addr=00009000, run size=000007ec bytes, compression=zero_init
+	.bss.3: load addr=00081f0e, load size=00000004 bytes, run addr=00009800, run size=000007d0 bytes, compression=zero_init
+	.bss.4: load addr=00081f12, load size=00000004 bytes, run addr=0000a000, run size=00000676 bytes, compression=zero_init
+	.bss.5: load addr=00081f16, load size=00000004 bytes, run addr=0000a800, run size=00000320 bytes, compression=zero_init
+	.bss.6: load addr=00081f1a, load size=00000004 bytes, run addr=0000ab40, run size=00000426 bytes, compression=zero_init
+	.bss.7: load addr=00081f1e, load size=00000004 bytes, run addr=0000b000, run size=00000200 bytes, compression=zero_init
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 00081f00 records: 3, size/record: 2, table size: 6
+	index: 0, handler: __TI_zero_init
+	index: 1, handler: __TI_decompress_lzss
+	index: 2, handler: __TI_decompress_none
+
+
+GLOBAL DATA SYMBOLS: SORTED BY DATA PAGE
+
+address     data page           name
+--------    ----------------    ----
+00000400      10 (00000400)     __stack
+
+00008800     220 (00008800)     uINV_DCAC_dBuff5
+
+00008e40     239 (00008e40)     uINV_DCAC_clearPWMTrip
+00008e41     239 (00008e40)     uINV_DCAC_update_Duty_Flag
+00008e42     239 (00008e40)     uINV_EN_PR_K_calculation
+00008e43     239 (00008e40)     uINV_DCAC_Counter_1
+00008e44     239 (00008e40)     uINV_DCAC_Counter_Disable_FFW
+00008e46     239 (00008e40)     uINV_DCAC_Counter_PWM_Unit
+00008e48     239 (00008e40)     uINV_ACDC_ISR1_FREQUENCY_HZ
+00008e4a     239 (00008e40)     uINV_ACDC_AC_FREQ_HZ
+00008e4c     239 (00008e40)     uINV_DCAC_Index_Modulation
+00008e4e     239 (00008e40)     uINV_DCAC_Index_Modulation_Amp
+00008e50     239 (00008e40)     uINV_DCAC_Index_Modulation_K
+00008e52     239 (00008e40)     uINV_ACDC_Duty_Cycle
+00008e54     239 (00008e40)     uINV_DCAC_Amplitude
+00008e56     239 (00008e40)     uINV_DCAC_dVal1
+00008e58     239 (00008e40)     uINV_DCAC_dVal2
+00008e5a     239 (00008e40)     uINV_DCAC_dVal3
+00008e5c     239 (00008e40)     uINV_DCAC_dVal4
+00008e5e     239 (00008e40)     uINV_DCAC_dVal5
+00008e60     239 (00008e40)     uINV_DCAC_dVal6
+00008e62     239 (00008e40)     uINV_DCAC_dVal7
+00008e64     239 (00008e40)     uINV_DCAC_dVal8
+00008e66     239 (00008e40)     uINV_DCDC_HS_GaN_Temp_Duty
+00008e68     239 (00008e40)     uINV_DCDC_LS_GaN_Temp_Duty
+00008e6a     239 (00008e40)     uINV_DCDC_HS_GaN_Temp
+00008e6c     239 (00008e40)     uINV_DCDC_LS_GaN_Temp
+00008e6e     239 (00008e40)     uINV_ACDC_filter_1
+00008e70     239 (00008e40)     uINV_ACDC_filter_2
+00008e72     239 (00008e40)     uINV_ACDC_90_Shifted
+00008e74     239 (00008e40)     a1
+00008e76     239 (00008e40)     b0
+00008e78     239 (00008e40)     b1
+00008e7a     239 (00008e40)     b2
+00008e7c     239 (00008e40)     uINV_ACDC_vAC_sensed_FILTER_1H
+00008e7e     239 (00008e40)     uINV_ACDC_iAC_real_Ref_Prev
+
+00008e80     23a (00008e80)     uINV_ACDC_iAC_real_Ref_OUT_PI
+00008e82     23a (00008e80)     uINV_ACDC_iAC_loop_err
+00008e84     23a (00008e80)     uINV_ACDC_vDC_loop_err
+00008e86     23a (00008e80)     uINV_ACDC_iAC_loop_out_PI
+00008e88     23a (00008e80)     uINV_ACDC_iAC_loop_out_PR1
+00008e8a     23a (00008e80)     uINV_ACDC_iAC_loop_out_PR3
+00008e8c     23a (00008e80)     uINV_ACDC_iAC_loop_out_PR5
+00008e8e     23a (00008e80)     uINV_ACDC_iAC_loop_out_PR7
+00008e90     23a (00008e80)     uINV_ACDC_iAC_loop_out_PR9
+00008e92     23a (00008e80)     uINV_ACDC_iAC_loop_out_PR11
+00008e94     23a (00008e80)     uINV_ACDC_iAC_loop_out_PR13
+00008e96     23a (00008e80)     uINV_ACDC_iAC_loop_out_PR15
+00008e98     23a (00008e80)     uINV_ACDC_iAC_loop_out_SUM
+00008e9a     23a (00008e80)     kiI_1H_Vac
+00008e9c     23a (00008e80)     woI_1H_Vac
+00008e9e     23a (00008e80)     wrcI_1H_Vac
+00008ea0     23a (00008e80)     kpI_1H
+00008ea2     23a (00008e80)     kiI_1H
+00008ea4     23a (00008e80)     kiI_3H
+00008ea6     23a (00008e80)     kiI_5H
+00008ea8     23a (00008e80)     kiI_7H
+00008eaa     23a (00008e80)     kiI_9H
+00008eac     23a (00008e80)     kiI_11H
+00008eae     23a (00008e80)     kiI_13H
+00008eb0     23a (00008e80)     kiI_15H
+00008eb2     23a (00008e80)     woI_1H
+00008eb4     23a (00008e80)     woI_3H
+00008eb6     23a (00008e80)     woI_5H
+00008eb8     23a (00008e80)     woI_7H
+00008eba     23a (00008e80)     woI_9H
+00008ebc     23a (00008e80)     woI_11H
+00008ebe     23a (00008e80)     woI_13H
+
+00008ec0     23b (00008ec0)     woI_15H
+00008ec2     23b (00008ec0)     wrcI_1H
+00008ec4     23b (00008ec0)     wrcI_3H
+00008ec6     23b (00008ec0)     wrcI_5H
+00008ec8     23b (00008ec0)     wrcI_7H
+00008eca     23b (00008ec0)     wrcI_9H
+00008ecc     23b (00008ec0)     wrcI_11H
+00008ece     23b (00008ec0)     wrcI_13H
+00008ed0     23b (00008ec0)     wrcI_15H
+00008ed2     23b (00008ec0)     uINV_REF_CHANGE1
+00008ed4     23b (00008ec0)     uINV_REF_CHANGE2
+00008ed6     23b (00008ec0)     uINV_REF_CHANGE3
+00008ed8     23b (00008ec0)     guiIrms
+00008eda     23b (00008ec0)     guiVrms
+00008edc     23b (00008ec0)     guiPrms
+00008ede     23b (00008ec0)     uINV_DCAC_rgen
+00008ee4     23b (00008ec0)     uINV_DCAC_dLog1
+
+00008f00     23c (00008f00)     uINV_DCAC_dLog2
+
+00008f40     23d (00008f40)     sine_mains
+
+00008f80     23e (00008f80)     uINV_spll_1ph
+
+00008fc2     23f (00008fc0)     startConverting
+00008fc3     23f (00008fc0)     stopConverting
+00008fc4     23f (00008fc0)     resetConverter
+00008fc5     23f (00008fc0)     p1
+00008fc6     23f (00008fc0)     p2
+00008fc7     23f (00008fc0)     p3
+00008fc8     23f (00008fc0)     p4
+00008fc9     23f (00008fc0)     start_chain
+00008fca     23f (00008fc0)     uINV_comms_data
+
+00009000     240 (00009000)     uINV_DCAC_dBuff6
+
+00009640     259 (00009640)     uINV_DCAC_dBuff1
+
+00009708     25c (00009700)     uINV_DCAC_dBuff2
+
+000097d2     25f (000097c0)     Alpha_State_Ptr
+000097d4     25f (000097c0)     A_Task_Ptr
+000097d6     25f (000097c0)     B_Task_Ptr
+
+00009800     260 (00009800)     uINV_DCAC_dBuff7
+
+00009e40     279 (00009e40)     uINV_DCAC_dBuff3
+
+00009f08     27c (00009f00)     uINV_DCAC_dBuff4
+
+0000a000     280 (0000a000)     uINV_DCAC_dBuff8
+
+0000a640     299 (0000a640)     uINV_ACDC_iAC_sensed_u16
+0000a642     299 (0000a640)     uINV_ACDC_HS_GaN_Temp_Duty
+0000a644     299 (0000a640)     uINV_ACDC_LS_GaN_Temp_Duty
+0000a646     299 (0000a640)     uINV_ACDC_HS_GaN_Temp
+0000a648     299 (0000a640)     uINV_ACDC_LS_GaN_Temp
+0000a64a     299 (0000a640)     uINV_reset_PLL
+0000a64c     299 (0000a640)     uINV_DCAC_Relay_Enable
+0000a64e     299 (0000a640)     uINV_ACDC_iAC_sensed_pu
+0000a650     299 (0000a640)     uINV_DCAC_vAC_sensed_pu
+0000a652     299 (0000a640)     uINV_ACDC_vDC_sensed_pu
+0000a654     299 (0000a640)     uINV_ACDC_iDC_sensed_pu
+0000a656     299 (0000a640)     uINV_ACDC_iAC_sensed
+0000a658     299 (0000a640)     uINV_DCAC_vAC_sensed
+0000a65a     299 (0000a640)     uINV_ACDC_vDC_sensed
+0000a65c     299 (0000a640)     uINV_ACDC_iDC_sensed
+0000a65e     299 (0000a640)     uINV_ACDC_vDC_sensed_FILTER
+0000a660     299 (0000a640)     uINV_ACDC_vDC_sensed_NOTCH
+0000a662     299 (0000a640)     uINV_ACDC_vAC_sensed_FILTER
+0000a664     299 (0000a640)     uINV_ACDC_fault
+0000a666     299 (0000a640)     uINV_ACDC_flag
+0000a668     299 (0000a640)     uINV_ACDC_stop
+0000a66a     299 (0000a640)     uINV_ACDC_iAC_real_Ref
+0000a66c     299 (0000a640)     uINV_ACDC_iAC_imag_Ref
+0000a66e     299 (0000a640)     uINV_DCAC_iAC_Ref
+0000a670     299 (0000a640)     uINV_ACDC_iAC_amp_Ref
+0000a672     299 (0000a640)     uINV_ACDC_vDC_Ref
+0000a674     299 (0000a640)     uINV_ACDC_vDC_Ref_Slewed
+
+0000ab40     2ad (0000ab40)     uINV_DCDC_globals
+0000ab4c     2ad (0000ab40)     uINV_DCDC_b1_mppt_incc
+0000ab60     2ad (0000ab40)     uINV_DCDC_b2_mppt_incc
+
+0000ab80     2ae (0000ab80)     uINV_DCDC_b3_mppt_incc
+0000ab94     2ae (0000ab80)     uINV_DCDC_b4_mppt_incc
+0000aba8     2ae (0000ab80)     uINV_DCDC_b1_pi_current
+
+0000abc0     2af (0000abc0)     uINV_DCDC_b2_pi_current
+0000abd6     2af (0000abc0)     uINV_DCDC_b3_pi_current
+
+0000ac00     2b0 (0000ac00)     uINV_DCDC_b4_pi_current
+0000ac16     2b0 (0000ac00)     uINV_DCDC_b1_pi_voltage
+
+0000ac40     2b1 (0000ac40)     uINV_DCDC_b2_pi_voltage
+0000ac56     2b1 (0000ac40)     uINV_DCDC_b3_pi_voltage
+
+0000ac80     2b2 (0000ac80)     uINV_DCDC_b4_pi_voltage
+0000ac96     2b2 (0000ac80)     uINV_DCDC_b1
+
+0000acc0     2b3 (0000acc0)     uINV_DCDC_b2
+
+0000ad00     2b4 (0000ad00)     uINV_DCDC_b3
+
+0000ad40     2b5 (0000ad40)     uINV_DCDC_b4
+0000ad66     2b5 (0000ad40)     message
+
+0000af80     2be (0000af80)     uINV_DCDC_boost_period_ticks
+0000af82     2be (0000af80)     uINV_DCDC_llc_freq_Hz
+0000af84     2be (0000af80)     uINV_DCDC_llc_period_ticks
+0000af86     2be (0000af80)     uINV_DCDC_llc_compare_ticks
+0000af88     2be (0000af80)     uINV_DCDC_boost_freq_Hz
+0000af8a     2be (0000af80)     uINV_DCDC_llc1_period_ticks
+0000af8c     2be (0000af80)     uINV_DCDC_llc1_cmp_ticks
+0000af8e     2be (0000af80)     uINV_DCDC_llc1_shift_ticks
+0000af90     2be (0000af80)     uINV_DCDC_llc2_period_ticks
+0000af92     2be (0000af80)     uINV_DCDC_llc2_cmp_ticks
+0000af94     2be (0000af80)     uINV_DCDC_llc2_shift_ticks
+0000af96     2be (0000af80)     uINV_DCDC_llc2_delay_ticks
+0000af98     2be (0000af80)     uINV_DCDC_llc_deadtime_ticks
+0000af9a     2be (0000af80)     uINV_DCDC_sr_period_ticks
+0000af9c     2be (0000af80)     uINV_DCDC_sr_cmp_ticks
+0000af9e     2be (0000af80)     uINV_DCDC_sr_shift_ticks
+0000afa0     2be (0000af80)     uINV_DCDC_sr_delay_ticks
+0000afa2     2be (0000af80)     uINV_DCDC_sr_deadtime_ticks
+0000afa4     2be (0000af80)     uINV_DCDC_sr_trip_delay_ticks
+0000afa6     2be (0000af80)     uINV_DCDC_sr_enabled
+0000afa8     2be (0000af80)     uINV_DCDC_boost_enabled
+0000afaa     2be (0000af80)     uINV_DCDC_avg_enable
+0000afac     2be (0000af80)     uINV_DCDC_temp_deg
+0000afae     2be (0000af80)     uINV_DCDC_temp_volt
+0000afb0     2be (0000af80)     __TI_enable_exit_profile_output
+0000afb2     2be (0000af80)     __TI_cleanup_ptr
+0000afb4     2be (0000af80)     __TI_dtors_ptr
+0000afb6     2be (0000af80)     _lock
+0000afb8     2be (0000af80)     errno
+
+0000afc0     2bf (0000afc0)     uINV_comms_flag
+0000afc1     2bf (0000afc0)     ConverterState
+0000afc2     2bf (0000afc0)     p1_on
+0000afc3     2bf (0000afc0)     p2_on
+0000afc4     2bf (0000afc0)     p3_on
+0000afc5     2bf (0000afc0)     p4_on
+0000afc6     2bf (0000afc0)     p1_off
+0000afc7     2bf (0000afc0)     p2_off
+0000afc8     2bf (0000afc0)     p3_off
+0000afc9     2bf (0000afc0)     p4_off
+0000afd6     2bf (0000afc0)     length_string
+0000afd8     2bf (0000afc0)     umbral1
+0000afda     2bf (0000afc0)     umbral2
+0000afdc     2bf (0000afc0)     umbral3
+0000afde     2bf (0000afc0)     umbral4
+0000afe2     2bf (0000afc0)     uINV_ACDC_iAC_limit
+0000afe3     2bf (0000afc0)     uINV_ACDC_iAC_bool
+0000afe4     2bf (0000afc0)     uINV_ACDC_iAC_overcurrent
+0000afe5     2bf (0000afc0)     uINV_ACDC_iAC_overcurrent2
+0000afe6     2bf (0000afc0)     uINV_ACDC_iAC_current_ref
+0000afe8     2bf (0000afc0)     uINV_ACDC_iAC_current_ref_p
+0000afea     2bf (0000afc0)     feedforward_k
+0000afec     2bf (0000afc0)     cross_threshold_var_into_pos
+0000afee     2bf (0000afc0)     cross_threshold_var_into_neg
+0000aff0     2bf (0000afc0)     min_action_after_cross_volts
+0000aff2     2bf (0000afc0)     action_pr_flag
+0000aff4     2bf (0000afc0)     action_pr_frozen
+0000aff6     2bf (0000afc0)     pr_w0
+0000aff8     2bf (0000afc0)     pr_wc
+0000affa     2bf (0000afc0)     pr_ki
+0000affc     2bf (0000afc0)     pr_kp
+
+0000b000     2c0 (0000b000)     output_string
+
+0000b200     2c8 (0000b200)     uINV_DCAC_POS
+0000b202     2c8 (0000b200)     uINV_ACDC_vAC_sensed_FILTER_POS
+0000b204     2c8 (0000b200)     uINV_ACDC_vAC_sensed_FILTER_K_1
+0000b206     2c8 (0000b200)     uINV_ACDC_GaN_Temp_Counter
+0000b208     2c8 (0000b200)     feedforward_target_k
+0000b20a     2c8 (0000b200)     feedforward_inc_k
+0000b20c     2c8 (0000b200)     recompute_control_constants
+0000b20e     2c8 (0000b200)     uINV_ACDC_FFW_K
+0000b210     2c8 (0000b200)     uINV_ACDC_FFW_K_Slewed
+0000b212     2c8 (0000b200)     gi_r1
+0000b224     2c8 (0000b200)     gi_r3
+
+0000b240     2c9 (0000b240)     gi_r5
+0000b252     2c9 (0000b240)     gi_r7
+0000b264     2c9 (0000b240)     gi_r9
+
+0000b280     2ca (0000b280)     gi_r11
+0000b292     2ca (0000b280)     gi_r13
+0000b2a4     2ca (0000b280)     gi_r15
+
+0000b2c0     2cb (0000b2c0)     gi_Vac_Filter
+0000b2d2     2cb (0000b2c0)     VDC_NOTCH_FILTER_2_Fe
+0000b2e4     2cb (0000b2c0)     gi_ACDC_pi
+
+0000b300     2cc (0000b300)     gv_ACDC_pi
+0000b316     2cc (0000b300)     uINV_DCDC_started
+0000b317     2cc (0000b300)     uINV_DCDC_clearPWMTrip
+0000b31a     2cc (0000b300)     uINV_DCDC_mppt_counter
+0000b31c     2cc (0000b300)     uINV_DCDC_Flag_Slew
+0000b31e     2cc (0000b300)     uINV_DCDC_Current_Protection_1
+0000b320     2cc (0000b300)     uINV_DCDC_Current_Protection_2
+0000b322     2cc (0000b300)     uINV_DCDC_Current_Protection_3
+0000b324     2cc (0000b300)     uINV_DCDC_Current_Protection_4
+0000b326     2cc (0000b300)     uINV_DCDC_Voltage_Protection_1
+0000b328     2cc (0000b300)     uINV_DCDC_Voltage_Protection_2
+0000b32a     2cc (0000b300)     uINV_DCDC_Voltage_Protection_3
+0000b32c     2cc (0000b300)     uINV_DCDC_Voltage_Protection_4
+0000b32e     2cc (0000b300)     uINV_DCDC_Overvoltage
+0000b330     2cc (0000b300)     sr_coef
+
+0000d000     340 (0000d000)     FPU32LOG2
+0000d002     340 (0000d000)     FPU32INVLOG10
+0000d004     340 (0000d000)     FPU32EXPBIAS
+0000d006     340 (0000d000)     FPU32LOG_TABLE_MASK1
+0000d008     340 (0000d000)     FPU32LOG_TABLE_MASK2
+0000d00a     340 (0000d000)     FPU32logTable
+
+0000d0d0     343 (0000d0c0)     FPU32expTableCoeff
+0000d0d0     343 (0000d0c0)     FPU32logTableEnd
+0000d0dc     343 (0000d0c0)     FPU32expTable
+0000d0dc     343 (0000d0c0)     FPU32expTableCoeffEnd
+
+0000d18e     346 (0000d180)     FPU32expTableEnd
+
+00084000    2100 (00084000)     _ctypes_
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+page  address   name                             
+----  -------   ----                             
+0     00086a5d  A0                               
+0     000846e1  A1                               
+0     00085772  ADC_A_init                       
+0     000850cb  ADC_B_init                       
+0     00085258  ADC_C_init                       
+0     000868e4  ADC_setOffsetTrimAll             
+0     000868fe  ADC_setVREF                      
+0     000097d4  A_Task_Ptr                       
+0     000097d2  Alpha_State_Ptr                  
+0     00086a67  B0                               
+0     00086a97  B1                               
+0     00086a9f  B2                               
+0     00086aa7  B3                               
+0     000097d6  B_Task_Ptr                       
+0     00085800  Board_init                       
+0     0008668f  C$$EXIT                          
+0     00083fff  C2000Ware_libraries_init         
+0     00086ad8  CMD_init                         
+0     000855b7  CMPSS_SR_init                    
+0     00086917  CMPSS_configFilterHigh           
+0     00086930  CMPSS_configFilterLow            
+0     0008698f  CMPSS_configLatchOnPWMSYNC       
+0     00086816  CMPSS_configRamp                 
+0     0000afc1  ConverterState                   
+0     0000e000  DCL_runDF22_C1                   
+0     00085dc7  Device_init                      
+0     000869f3  Device_initGPIO                  
+0     00086a21  ECAP_setEmulationMode            
+0     00082000  EPWM_init                        
+0     00086a85  EPWM_setEmulationMode            
+0     0000d004  FPU32EXPBIAS                     
+0     0000d002  FPU32INVLOG10                    
+0     0000d000  FPU32LOG2                        
+0     0000d006  FPU32LOG_TABLE_MASK1             
+0     0000d008  FPU32LOG_TABLE_MASK2             
+0     0000d0dc  FPU32expTable                    
+0     0000d0d0  FPU32expTableCoeff               
+0     0000d0dc  FPU32expTableCoeffEnd            
+0     0000d18e  FPU32expTableEnd                 
+0     0000d00a  FPU32logTable                    
+0     0000d0d0  FPU32logTableEnd                 
+0     00084dfe  GPIO_init                        
+0     00085ed1  GPIO_setAnalogMode               
+0     0008674c  GPIO_setControllerCore           
+0     00085fe0  GPIO_setDirectionMode            
+0     00086295  GPIO_setPadConfig                
+0     000864f5  GPIO_setPinConfig                
+0     0008676e  GPIO_setQualificationMode        
+0     0000f76e  ISR1                             
+0     0000f000  ISR2                             
+0     0000fe54  ISR3                             
+0     00086a2e  Interrupt_defaultHandler         
+0     000863f7  Interrupt_enable                 
+0     00086a71  Interrupt_illegalOperationHandler
+0     000861d2  Interrupt_initModule             
+0     000869a4  Interrupt_initVectorTable        
+0     00086a7b  Interrupt_nmiHandler             
+0     00084340  PinMux_init                      
+0     00085c95  SCI_COMMS_init                   
+0     000868ac  SCI_clearInterruptStatus         
+0     00086729  SCI_setConfig                    
+0     00086790  SCI_writeCharArray               
+0     000836c2  SYSCTL_init                      
+0     000869ce  SysCtl_configureType             
+0     0000fe91  SysCtl_delay                     
+0     00085e23  SysCtl_getClock                  
+0     000869b9  SysCtl_getLowSpeedClock          
+0     00084c2c  SysCtl_isPLLValid                
+0     000865e3  SysCtl_selectOscSource           
+0     00085f16  SysCtl_selectXTAL                
+0     000867d4  SysCtl_selectXTALSingleEnded     
+0     00084814  SysCtl_setClock                  
+0     0000b2d2  VDC_NOTCH_FILTER_2_Fe            
+0     00086610  XBAR_setEPWMMuxConfig            
+0     00080008  __TI_BINIT_Base                  
+0     0008001c  __TI_BINIT_Limit                 
+0     00081f22  __TI_CINIT_Base                  
+0     00081f4e  __TI_CINIT_Limit                 
+0     00081f4e  __TI_CINIT_Warm                  
+0     00081f00  __TI_Handler_Table_Base          
+0     00081f06  __TI_Handler_Table_Limit         
+0     00000600  __TI_STACK_END                   
+abs   00000200  __TI_STACK_SIZE                  
+0     0008642d  __TI_auto_init_nopinit           
+0     0000afb2  __TI_cleanup_ptr                 
+0     00086525  __TI_decompress_lzss             
+0     00086aaf  __TI_decompress_none             
+0     0000afb4  __TI_dtors_ptr                   
+0     0000afb0  __TI_enable_exit_profile_output  
+0     00086555  __TI_ltoa                        
+abs   ffffffff  __TI_pprof_out_hndl              
+0     00082df0  __TI_printfi                     
+abs   ffffffff  __TI_prof_data_size              
+abs   ffffffff  __TI_prof_data_start             
+0     00080008  __TI_table_binit                 
+0     00084ffa  __TI_zero_init                   
+0     0008551b  __c28xabi_addd                   
+0     00086949  __c28xabi_andll                  
+0     0008663b  __c28xabi_cmpd                   
+0     00086854  __c28xabi_cmpll                  
+0     00086866  __c28xabi_cmpull                 
+0     0008588e  __c28xabi_divd                   
+0     00085919  __c28xabi_divf                   
+0     000867b2  __c28xabi_divi                   
+0     00086665  __c28xabi_divl                   
+0     00084931  __c28xabi_divll                  
+0     00086682  __c28xabi_divul                  
+0     000849a7  __c28xabi_divull                 
+0     000867f5  __c28xabi_dtoi                   
+0     00086835  __c28xabi_dtol                   
+0     00086872  __c28xabi_itod                   
+0     000868c8  __c28xabi_ltod                   
+0     000867c3  __c28xabi_modi                   
+0     00086674  __c28xabi_modl                   
+0     0008496d  __c28xabi_modll                  
+0     00086689  __c28xabi_modul                  
+0     000849d6  __c28xabi_modull                 
+0     00085aaf  __c28xabi_mpyd                   
+0     00086a8e  __c28xabi_negd                   
+0     00086951  __c28xabi_orll                   
+0     00086a13  __c28xabi_subd                   
+0     00086959  __c28xabi_xorll                  
+n/a   UNDEFED   __c_args__                       
+0     00086ad3  __error__                        
+0     00000400  __stack                          
+0     00086a3a  _args_main                       
+0     00086961  _c_int00                         
+0     00084000  _ctypes_                         
+0     0000afb6  _lock                            
+0     00086ad9  _nop                             
+0     00086ada  _system_post_cinit               
+0     00086ad6  _system_pre_init                 
+0     00008e74  a1                               
+0     0008668f  abort                            
+0     0000aff2  action_pr_flag                   
+0     0000aff4  action_pr_frozen                 
+0     00086493  atoi                             
+0     00008e76  b0                               
+0     00008e78  b1                               
+0     00008e7a  b2                               
+0     00085318  checkPanels_ON_OFF               
+0     00080000  code_start                       
+0     00085c27  computeDF22_NotchFltrCoeff       
+0     00085bb5  computeDF22_PRcontrollerCoeff    
+0     00086585  copy_in                          
+0     00086705  copysign                         
+0     00086705  copysignl                        
+0     0000afee  cross_threshold_var_into_neg     
+0     0000afec  cross_threshold_var_into_pos     
+0     0000afb8  errno                            
+0     00086691  exit                             
+0     0000b20a  feedforward_inc_k                
+0     0000afea  feedforward_k                    
+0     0000b208  feedforward_target_k             
+0     00083fa5  frexp                            
+0     00083fa5  frexpl                           
+0     0000b2e4  gi_ACDC_pi                       
+0     0000b2c0  gi_Vac_Filter                    
+0     0000b212  gi_r1                            
+0     0000b280  gi_r11                           
+0     0000b292  gi_r13                           
+0     0000b2a4  gi_r15                           
+0     0000b224  gi_r3                            
+0     0000b240  gi_r5                            
+0     0000b252  gi_r7                            
+0     0000b264  gi_r9                            
+0     00008ed8  guiIrms                          
+0     00008edc  guiPrms                          
+0     00008eda  guiVrms                          
+0     0000b300  gv_ACDC_pi                       
+0     00008eac  kiI_11H                          
+0     00008eae  kiI_13H                          
+0     00008eb0  kiI_15H                          
+0     00008ea2  kiI_1H                           
+0     00008e9a  kiI_1H_Vac                       
+0     00008ea4  kiI_3H                           
+0     00008ea6  kiI_5H                           
+0     00008ea8  kiI_7H                           
+0     00008eaa  kiI_9H                           
+0     00008ea0  kpI_1H                           
+0     000853cf  ldexp                            
+0     000853cf  ldexpl                           
+0     0000afd6  length_string                    
+0     00085cfe  main                             
+0     00086a03  memccpy                          
+0     0008688f  memcpy                           
+0     00086ac7  memset                           
+0     0000ad66  message                          
+0     0000aff0  min_action_after_cross_volts     
+0     000866b8  myCLB0_init                      
+0     000859a1  myCMPSS_init                     
+0     00082f75  myECAP0_init                     
+0     0000b000  output_string                    
+0     00008fc5  p1                               
+0     0000afc6  p1_off                           
+0     0000afc2  p1_on                            
+0     00008fc6  p2                               
+0     0000afc7  p2_off                           
+0     0000afc3  p2_on                            
+0     00008fc7  p3                               
+0     0000afc8  p3_off                           
+0     0000afc4  p3_on                            
+0     00008fc8  p4                               
+0     0000afc9  p4_off                           
+0     0000afc5  p4_on                            
+0     0008547b  powf                             
+0     0000affa  pr_ki                            
+0     0000affc  pr_kp                            
+0     0000aff6  pr_w0                            
+0     0000aff8  pr_wc                            
+0     0000b20c  recompute_control_constants      
+0     00008fc4  resetConverter                   
+0     000853cf  scalbn                           
+0     000853cf  scalbnl                          
+0     00008f40  sine_mains                       
+0     00084ee1  solar_uinverter_to_string        
+0     00086461  sprintf                          
+0     0000b330  sr_coef                          
+0     00008fc2  startConverting                  
+0     00008fc9  start_chain                      
+0     00008fc3  stopConverting                   
+0     00086a46  strchr                           
+0     00086ace  strcpy                           
+0     00086abf  strlen                           
+0     00085d67  tanf                             
+0     00008e72  uINV_ACDC_90_Shifted             
+0     00008e4a  uINV_ACDC_AC_FREQ_HZ             
+0     00008e52  uINV_ACDC_Duty_Cycle             
+0     0000b20e  uINV_ACDC_FFW_K                  
+0     0000b210  uINV_ACDC_FFW_K_Slewed           
+0     0000b206  uINV_ACDC_GaN_Temp_Counter       
+0     0000a646  uINV_ACDC_HS_GaN_Temp            
+0     0000a642  uINV_ACDC_HS_GaN_Temp_Duty       
+0     00008e48  uINV_ACDC_ISR1_FREQUENCY_HZ      
+0     0000a648  uINV_ACDC_LS_GaN_Temp            
+0     0000a644  uINV_ACDC_LS_GaN_Temp_Duty       
+0     0000a664  uINV_ACDC_fault                  
+0     00008e6e  uINV_ACDC_filter_1               
+0     00008e70  uINV_ACDC_filter_2               
+0     0000a666  uINV_ACDC_flag                   
+0     0000a670  uINV_ACDC_iAC_amp_Ref            
+0     0000afe3  uINV_ACDC_iAC_bool               
+0     0000afe6  uINV_ACDC_iAC_current_ref        
+0     0000afe8  uINV_ACDC_iAC_current_ref_p      
+0     0000a66c  uINV_ACDC_iAC_imag_Ref           
+0     0000afe2  uINV_ACDC_iAC_limit              
+0     00008e82  uINV_ACDC_iAC_loop_err           
+0     00008e86  uINV_ACDC_iAC_loop_out_PI        
+0     00008e88  uINV_ACDC_iAC_loop_out_PR1       
+0     00008e92  uINV_ACDC_iAC_loop_out_PR11      
+0     00008e94  uINV_ACDC_iAC_loop_out_PR13      
+0     00008e96  uINV_ACDC_iAC_loop_out_PR15      
+0     00008e8a  uINV_ACDC_iAC_loop_out_PR3       
+0     00008e8c  uINV_ACDC_iAC_loop_out_PR5       
+0     00008e8e  uINV_ACDC_iAC_loop_out_PR7       
+0     00008e90  uINV_ACDC_iAC_loop_out_PR9       
+0     00008e98  uINV_ACDC_iAC_loop_out_SUM       
+0     0000afe4  uINV_ACDC_iAC_overcurrent        
+0     0000afe5  uINV_ACDC_iAC_overcurrent2       
+0     0000a66a  uINV_ACDC_iAC_real_Ref           
+0     00008e80  uINV_ACDC_iAC_real_Ref_OUT_PI    
+0     00008e7e  uINV_ACDC_iAC_real_Ref_Prev      
+0     0000a656  uINV_ACDC_iAC_sensed             
+0     0000a64e  uINV_ACDC_iAC_sensed_pu          
+0     0000a640  uINV_ACDC_iAC_sensed_u16         
+0     0000a65c  uINV_ACDC_iDC_sensed             
+0     0000a654  uINV_ACDC_iDC_sensed_pu          
+0     0000a668  uINV_ACDC_stop                   
+0     0000a662  uINV_ACDC_vAC_sensed_FILTER      
+0     00008e7c  uINV_ACDC_vAC_sensed_FILTER_1H   
+0     0000b204  uINV_ACDC_vAC_sensed_FILTER_K_1  
+0     0000b202  uINV_ACDC_vAC_sensed_FILTER_POS  
+0     0000a672  uINV_ACDC_vDC_Ref                
+0     0000a674  uINV_ACDC_vDC_Ref_Slewed         
+0     00008e84  uINV_ACDC_vDC_loop_err           
+0     0000a65a  uINV_ACDC_vDC_sensed             
+0     0000a65e  uINV_ACDC_vDC_sensed_FILTER      
+0     0000a660  uINV_ACDC_vDC_sensed_NOTCH       
+0     0000a652  uINV_ACDC_vDC_sensed_pu          
+0     000856e2  uINV_Check                       
+0     00008e54  uINV_DCAC_Amplitude              
+0     00008e43  uINV_DCAC_Counter_1              
+0     00008e44  uINV_DCAC_Counter_Disable_FFW    
+0     00008e46  uINV_DCAC_Counter_PWM_Unit       
+0     00084a38  uINV_DCAC_GaN_temp               
+0     00083a63  uINV_DCAC_GlobalVariablesInit    
+0     00008e4c  uINV_DCAC_Index_Modulation       
+0     00008e4e  uINV_DCAC_Index_Modulation_Amp   
+0     00008e50  uINV_DCAC_Index_Modulation_K     
+0     00085a28  uINV_DCAC_Init                   
+0     0000b200  uINV_DCAC_POS                    
+0     0000a64c  uINV_DCAC_Relay_Enable           
+0     00008e40  uINV_DCAC_clearPWMTrip           
+0     00009640  uINV_DCAC_dBuff1                 
+0     00009708  uINV_DCAC_dBuff2                 
+0     00009e40  uINV_DCAC_dBuff3                 
+0     00009f08  uINV_DCAC_dBuff4                 
+0     00008800  uINV_DCAC_dBuff5                 
+0     00009000  uINV_DCAC_dBuff6                 
+0     00009800  uINV_DCAC_dBuff7                 
+0     0000a000  uINV_DCAC_dBuff8                 
+0     00008ee4  uINV_DCAC_dLog1                  
+0     00008f00  uINV_DCAC_dLog2                  
+0     00008e56  uINV_DCAC_dVal1                  
+0     00008e58  uINV_DCAC_dVal2                  
+0     00008e5a  uINV_DCAC_dVal3                  
+0     00008e5c  uINV_DCAC_dVal4                  
+0     00008e5e  uINV_DCAC_dVal5                  
+0     00008e60  uINV_DCAC_dVal6                  
+0     00008e62  uINV_DCAC_dVal7                  
+0     00008e64  uINV_DCAC_dVal8                  
+0     0000a66e  uINV_DCAC_iAC_Ref                
+0     00008ede  uINV_DCAC_rgen                   
+0     00085000  uINV_DCAC_test                   
+0     00008e41  uINV_DCAC_update_Duty_Flag       
+0     0000a658  uINV_DCAC_vAC_sensed             
+0     0000a650  uINV_DCAC_vAC_sensed_pu          
+0     0000b31e  uINV_DCDC_Current_Protection_1   
+0     0000b320  uINV_DCDC_Current_Protection_2   
+0     0000b322  uINV_DCDC_Current_Protection_3   
+0     0000b324  uINV_DCDC_Current_Protection_4   
+0     0000b31c  uINV_DCDC_Flag_Slew              
+0     00008e6a  uINV_DCDC_HS_GaN_Temp            
+0     00008e66  uINV_DCDC_HS_GaN_Temp_Duty       
+0     00008e6c  uINV_DCDC_LS_GaN_Temp            
+0     00008e68  uINV_DCDC_LS_GaN_Temp_Duty       
+0     0000b32e  uINV_DCDC_Overvoltage            
+0     0000b326  uINV_DCDC_Voltage_Protection_1   
+0     0000b328  uINV_DCDC_Voltage_Protection_2   
+0     0000b32a  uINV_DCDC_Voltage_Protection_3   
+0     0000b32c  uINV_DCDC_Voltage_Protection_4   
+0     0000afaa  uINV_DCDC_avg_enable             
+0     0000ac96  uINV_DCDC_b1                     
+0     0000ab4c  uINV_DCDC_b1_mppt_incc           
+0     0000aba8  uINV_DCDC_b1_pi_current          
+0     0000ac16  uINV_DCDC_b1_pi_voltage          
+0     0000acc0  uINV_DCDC_b2                     
+0     0000ab60  uINV_DCDC_b2_mppt_incc           
+0     0000abc0  uINV_DCDC_b2_pi_current          
+0     0000ac40  uINV_DCDC_b2_pi_voltage          
+0     0000ad00  uINV_DCDC_b3                     
+0     0000ab80  uINV_DCDC_b3_mppt_incc           
+0     0000abd6  uINV_DCDC_b3_pi_current          
+0     0000ac56  uINV_DCDC_b3_pi_voltage          
+0     0000ad40  uINV_DCDC_b4                     
+0     0000ab94  uINV_DCDC_b4_mppt_incc           
+0     0000ac00  uINV_DCDC_b4_pi_current          
+0     0000ac80  uINV_DCDC_b4_pi_voltage          
+0     0000afa8  uINV_DCDC_boost_enabled          
+0     0000af88  uINV_DCDC_boost_freq_Hz          
+0     0000af80  uINV_DCDC_boost_period_ticks     
+0     0000b317  uINV_DCDC_clearPWMTrip           
+0     00085e7c  uINV_DCDC_fail                   
+0     0000ab40  uINV_DCDC_globals                
+0     00086978  uINV_DCDC_init                   
+0     0000af8c  uINV_DCDC_llc1_cmp_ticks         
+0     0000af8a  uINV_DCDC_llc1_period_ticks      
+0     0000af8e  uINV_DCDC_llc1_shift_ticks       
+0     0000af92  uINV_DCDC_llc2_cmp_ticks         
+0     0000af96  uINV_DCDC_llc2_delay_ticks       
+0     0000af90  uINV_DCDC_llc2_period_ticks      
+0     0000af94  uINV_DCDC_llc2_shift_ticks       
+0     0000af86  uINV_DCDC_llc_compare_ticks      
+0     0000af98  uINV_DCDC_llc_deadtime_ticks     
+0     0000af82  uINV_DCDC_llc_freq_Hz            
+0     0000af84  uINV_DCDC_llc_period_ticks       
+0     0000b31a  uINV_DCDC_mppt_counter           
+0     0000af9c  uINV_DCDC_sr_cmp_ticks           
+0     0000afa2  uINV_DCDC_sr_deadtime_ticks      
+0     0000afa0  uINV_DCDC_sr_delay_ticks         
+0     0000afa6  uINV_DCDC_sr_enabled             
+0     0000af9a  uINV_DCDC_sr_period_ticks        
+0     0000af9e  uINV_DCDC_sr_shift_ticks         
+0     0000afa4  uINV_DCDC_sr_trip_delay_ticks    
+0     0000b316  uINV_DCDC_started                
+0     0000afac  uINV_DCDC_temp_deg               
+0     0000afae  uINV_DCDC_temp_volt              
+0     00084521  uINV_DCDC_test                   
+0     00008e42  uINV_EN_PR_K_calculation         
+0     00008ed2  uINV_REF_CHANGE1                 
+0     00008ed4  uINV_REF_CHANGE2                 
+0     00008ed6  uINV_REF_CHANGE3                 
+0     00084b3f  uINV_StartConverters             
+0     00085b32  uINV_StopBoost                   
+0     000864c4  uINV_StopConversion              
+0     0008634d  uINV_SystemInit                  
+0     000865b5  uINV_WaitPanels                  
+0     00008fca  uINV_comms_data                  
+0     0000afc0  uINV_comms_flag                  
+0     00084faf  uINV_comms_init                  
+0     000866df  uINV_comms_send                  
+0     00086312  uINV_comms_test                  
+0     00085193  uINV_comms_update_data           
+0     000863bf  uINV_controller_PLC              
+0     0000a64a  uINV_reset_PLL                   
+0     00008f80  uINV_spll_1ph                    
+0     0000afd8  umbral1                          
+0     0000afda  umbral2                          
+0     0000afdc  umbral3                          
+0     0000afde  umbral4                          
+0     00086a52  wcslen                           
+0     00008ebc  woI_11H                          
+0     00008ebe  woI_13H                          
+0     00008ec0  woI_15H                          
+0     00008eb2  woI_1H                           
+0     00008e9c  woI_1H_Vac                       
+0     00008eb4  woI_3H                           
+0     00008eb6  woI_5H                           
+0     00008eb8  woI_7H                           
+0     00008eba  woI_9H                           
+0     00008ecc  wrcI_11H                         
+0     00008ece  wrcI_13H                         
+0     00008ed0  wrcI_15H                         
+0     00008ec2  wrcI_1H                          
+0     00008e9e  wrcI_1H_Vac                      
+0     00008ec4  wrcI_3H                          
+0     00008ec6  wrcI_5H                          
+0     00008ec8  wrcI_7H                          
+0     00008eca  wrcI_9H                          
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+page  address   name                             
+----  -------   ----                             
+0     00000400  __stack                          
+0     00000600  __TI_STACK_END                   
+0     00008800  uINV_DCAC_dBuff5                 
+0     00008e40  uINV_DCAC_clearPWMTrip           
+0     00008e41  uINV_DCAC_update_Duty_Flag       
+0     00008e42  uINV_EN_PR_K_calculation         
+0     00008e43  uINV_DCAC_Counter_1              
+0     00008e44  uINV_DCAC_Counter_Disable_FFW    
+0     00008e46  uINV_DCAC_Counter_PWM_Unit       
+0     00008e48  uINV_ACDC_ISR1_FREQUENCY_HZ      
+0     00008e4a  uINV_ACDC_AC_FREQ_HZ             
+0     00008e4c  uINV_DCAC_Index_Modulation       
+0     00008e4e  uINV_DCAC_Index_Modulation_Amp   
+0     00008e50  uINV_DCAC_Index_Modulation_K     
+0     00008e52  uINV_ACDC_Duty_Cycle             
+0     00008e54  uINV_DCAC_Amplitude              
+0     00008e56  uINV_DCAC_dVal1                  
+0     00008e58  uINV_DCAC_dVal2                  
+0     00008e5a  uINV_DCAC_dVal3                  
+0     00008e5c  uINV_DCAC_dVal4                  
+0     00008e5e  uINV_DCAC_dVal5                  
+0     00008e60  uINV_DCAC_dVal6                  
+0     00008e62  uINV_DCAC_dVal7                  
+0     00008e64  uINV_DCAC_dVal8                  
+0     00008e66  uINV_DCDC_HS_GaN_Temp_Duty       
+0     00008e68  uINV_DCDC_LS_GaN_Temp_Duty       
+0     00008e6a  uINV_DCDC_HS_GaN_Temp            
+0     00008e6c  uINV_DCDC_LS_GaN_Temp            
+0     00008e6e  uINV_ACDC_filter_1               
+0     00008e70  uINV_ACDC_filter_2               
+0     00008e72  uINV_ACDC_90_Shifted             
+0     00008e74  a1                               
+0     00008e76  b0                               
+0     00008e78  b1                               
+0     00008e7a  b2                               
+0     00008e7c  uINV_ACDC_vAC_sensed_FILTER_1H   
+0     00008e7e  uINV_ACDC_iAC_real_Ref_Prev      
+0     00008e80  uINV_ACDC_iAC_real_Ref_OUT_PI    
+0     00008e82  uINV_ACDC_iAC_loop_err           
+0     00008e84  uINV_ACDC_vDC_loop_err           
+0     00008e86  uINV_ACDC_iAC_loop_out_PI        
+0     00008e88  uINV_ACDC_iAC_loop_out_PR1       
+0     00008e8a  uINV_ACDC_iAC_loop_out_PR3       
+0     00008e8c  uINV_ACDC_iAC_loop_out_PR5       
+0     00008e8e  uINV_ACDC_iAC_loop_out_PR7       
+0     00008e90  uINV_ACDC_iAC_loop_out_PR9       
+0     00008e92  uINV_ACDC_iAC_loop_out_PR11      
+0     00008e94  uINV_ACDC_iAC_loop_out_PR13      
+0     00008e96  uINV_ACDC_iAC_loop_out_PR15      
+0     00008e98  uINV_ACDC_iAC_loop_out_SUM       
+0     00008e9a  kiI_1H_Vac                       
+0     00008e9c  woI_1H_Vac                       
+0     00008e9e  wrcI_1H_Vac                      
+0     00008ea0  kpI_1H                           
+0     00008ea2  kiI_1H                           
+0     00008ea4  kiI_3H                           
+0     00008ea6  kiI_5H                           
+0     00008ea8  kiI_7H                           
+0     00008eaa  kiI_9H                           
+0     00008eac  kiI_11H                          
+0     00008eae  kiI_13H                          
+0     00008eb0  kiI_15H                          
+0     00008eb2  woI_1H                           
+0     00008eb4  woI_3H                           
+0     00008eb6  woI_5H                           
+0     00008eb8  woI_7H                           
+0     00008eba  woI_9H                           
+0     00008ebc  woI_11H                          
+0     00008ebe  woI_13H                          
+0     00008ec0  woI_15H                          
+0     00008ec2  wrcI_1H                          
+0     00008ec4  wrcI_3H                          
+0     00008ec6  wrcI_5H                          
+0     00008ec8  wrcI_7H                          
+0     00008eca  wrcI_9H                          
+0     00008ecc  wrcI_11H                         
+0     00008ece  wrcI_13H                         
+0     00008ed0  wrcI_15H                         
+0     00008ed2  uINV_REF_CHANGE1                 
+0     00008ed4  uINV_REF_CHANGE2                 
+0     00008ed6  uINV_REF_CHANGE3                 
+0     00008ed8  guiIrms                          
+0     00008eda  guiVrms                          
+0     00008edc  guiPrms                          
+0     00008ede  uINV_DCAC_rgen                   
+0     00008ee4  uINV_DCAC_dLog1                  
+0     00008f00  uINV_DCAC_dLog2                  
+0     00008f40  sine_mains                       
+0     00008f80  uINV_spll_1ph                    
+0     00008fc2  startConverting                  
+0     00008fc3  stopConverting                   
+0     00008fc4  resetConverter                   
+0     00008fc5  p1                               
+0     00008fc6  p2                               
+0     00008fc7  p3                               
+0     00008fc8  p4                               
+0     00008fc9  start_chain                      
+0     00008fca  uINV_comms_data                  
+0     00009000  uINV_DCAC_dBuff6                 
+0     00009640  uINV_DCAC_dBuff1                 
+0     00009708  uINV_DCAC_dBuff2                 
+0     000097d2  Alpha_State_Ptr                  
+0     000097d4  A_Task_Ptr                       
+0     000097d6  B_Task_Ptr                       
+0     00009800  uINV_DCAC_dBuff7                 
+0     00009e40  uINV_DCAC_dBuff3                 
+0     00009f08  uINV_DCAC_dBuff4                 
+0     0000a000  uINV_DCAC_dBuff8                 
+0     0000a640  uINV_ACDC_iAC_sensed_u16         
+0     0000a642  uINV_ACDC_HS_GaN_Temp_Duty       
+0     0000a644  uINV_ACDC_LS_GaN_Temp_Duty       
+0     0000a646  uINV_ACDC_HS_GaN_Temp            
+0     0000a648  uINV_ACDC_LS_GaN_Temp            
+0     0000a64a  uINV_reset_PLL                   
+0     0000a64c  uINV_DCAC_Relay_Enable           
+0     0000a64e  uINV_ACDC_iAC_sensed_pu          
+0     0000a650  uINV_DCAC_vAC_sensed_pu          
+0     0000a652  uINV_ACDC_vDC_sensed_pu          
+0     0000a654  uINV_ACDC_iDC_sensed_pu          
+0     0000a656  uINV_ACDC_iAC_sensed             
+0     0000a658  uINV_DCAC_vAC_sensed             
+0     0000a65a  uINV_ACDC_vDC_sensed             
+0     0000a65c  uINV_ACDC_iDC_sensed             
+0     0000a65e  uINV_ACDC_vDC_sensed_FILTER      
+0     0000a660  uINV_ACDC_vDC_sensed_NOTCH       
+0     0000a662  uINV_ACDC_vAC_sensed_FILTER      
+0     0000a664  uINV_ACDC_fault                  
+0     0000a666  uINV_ACDC_flag                   
+0     0000a668  uINV_ACDC_stop                   
+0     0000a66a  uINV_ACDC_iAC_real_Ref           
+0     0000a66c  uINV_ACDC_iAC_imag_Ref           
+0     0000a66e  uINV_DCAC_iAC_Ref                
+0     0000a670  uINV_ACDC_iAC_amp_Ref            
+0     0000a672  uINV_ACDC_vDC_Ref                
+0     0000a674  uINV_ACDC_vDC_Ref_Slewed         
+0     0000ab40  uINV_DCDC_globals                
+0     0000ab4c  uINV_DCDC_b1_mppt_incc           
+0     0000ab60  uINV_DCDC_b2_mppt_incc           
+0     0000ab80  uINV_DCDC_b3_mppt_incc           
+0     0000ab94  uINV_DCDC_b4_mppt_incc           
+0     0000aba8  uINV_DCDC_b1_pi_current          
+0     0000abc0  uINV_DCDC_b2_pi_current          
+0     0000abd6  uINV_DCDC_b3_pi_current          
+0     0000ac00  uINV_DCDC_b4_pi_current          
+0     0000ac16  uINV_DCDC_b1_pi_voltage          
+0     0000ac40  uINV_DCDC_b2_pi_voltage          
+0     0000ac56  uINV_DCDC_b3_pi_voltage          
+0     0000ac80  uINV_DCDC_b4_pi_voltage          
+0     0000ac96  uINV_DCDC_b1                     
+0     0000acc0  uINV_DCDC_b2                     
+0     0000ad00  uINV_DCDC_b3                     
+0     0000ad40  uINV_DCDC_b4                     
+0     0000ad66  message                          
+0     0000af80  uINV_DCDC_boost_period_ticks     
+0     0000af82  uINV_DCDC_llc_freq_Hz            
+0     0000af84  uINV_DCDC_llc_period_ticks       
+0     0000af86  uINV_DCDC_llc_compare_ticks      
+0     0000af88  uINV_DCDC_boost_freq_Hz          
+0     0000af8a  uINV_DCDC_llc1_period_ticks      
+0     0000af8c  uINV_DCDC_llc1_cmp_ticks         
+0     0000af8e  uINV_DCDC_llc1_shift_ticks       
+0     0000af90  uINV_DCDC_llc2_period_ticks      
+0     0000af92  uINV_DCDC_llc2_cmp_ticks         
+0     0000af94  uINV_DCDC_llc2_shift_ticks       
+0     0000af96  uINV_DCDC_llc2_delay_ticks       
+0     0000af98  uINV_DCDC_llc_deadtime_ticks     
+0     0000af9a  uINV_DCDC_sr_period_ticks        
+0     0000af9c  uINV_DCDC_sr_cmp_ticks           
+0     0000af9e  uINV_DCDC_sr_shift_ticks         
+0     0000afa0  uINV_DCDC_sr_delay_ticks         
+0     0000afa2  uINV_DCDC_sr_deadtime_ticks      
+0     0000afa4  uINV_DCDC_sr_trip_delay_ticks    
+0     0000afa6  uINV_DCDC_sr_enabled             
+0     0000afa8  uINV_DCDC_boost_enabled          
+0     0000afaa  uINV_DCDC_avg_enable             
+0     0000afac  uINV_DCDC_temp_deg               
+0     0000afae  uINV_DCDC_temp_volt              
+0     0000afb0  __TI_enable_exit_profile_output  
+0     0000afb2  __TI_cleanup_ptr                 
+0     0000afb4  __TI_dtors_ptr                   
+0     0000afb6  _lock                            
+0     0000afb8  errno                            
+0     0000afc0  uINV_comms_flag                  
+0     0000afc1  ConverterState                   
+0     0000afc2  p1_on                            
+0     0000afc3  p2_on                            
+0     0000afc4  p3_on                            
+0     0000afc5  p4_on                            
+0     0000afc6  p1_off                           
+0     0000afc7  p2_off                           
+0     0000afc8  p3_off                           
+0     0000afc9  p4_off                           
+0     0000afd6  length_string                    
+0     0000afd8  umbral1                          
+0     0000afda  umbral2                          
+0     0000afdc  umbral3                          
+0     0000afde  umbral4                          
+0     0000afe2  uINV_ACDC_iAC_limit              
+0     0000afe3  uINV_ACDC_iAC_bool               
+0     0000afe4  uINV_ACDC_iAC_overcurrent        
+0     0000afe5  uINV_ACDC_iAC_overcurrent2       
+0     0000afe6  uINV_ACDC_iAC_current_ref        
+0     0000afe8  uINV_ACDC_iAC_current_ref_p      
+0     0000afea  feedforward_k                    
+0     0000afec  cross_threshold_var_into_pos     
+0     0000afee  cross_threshold_var_into_neg     
+0     0000aff0  min_action_after_cross_volts     
+0     0000aff2  action_pr_flag                   
+0     0000aff4  action_pr_frozen                 
+0     0000aff6  pr_w0                            
+0     0000aff8  pr_wc                            
+0     0000affa  pr_ki                            
+0     0000affc  pr_kp                            
+0     0000b000  output_string                    
+0     0000b200  uINV_DCAC_POS                    
+0     0000b202  uINV_ACDC_vAC_sensed_FILTER_POS  
+0     0000b204  uINV_ACDC_vAC_sensed_FILTER_K_1  
+0     0000b206  uINV_ACDC_GaN_Temp_Counter       
+0     0000b208  feedforward_target_k             
+0     0000b20a  feedforward_inc_k                
+0     0000b20c  recompute_control_constants      
+0     0000b20e  uINV_ACDC_FFW_K                  
+0     0000b210  uINV_ACDC_FFW_K_Slewed           
+0     0000b212  gi_r1                            
+0     0000b224  gi_r3                            
+0     0000b240  gi_r5                            
+0     0000b252  gi_r7                            
+0     0000b264  gi_r9                            
+0     0000b280  gi_r11                           
+0     0000b292  gi_r13                           
+0     0000b2a4  gi_r15                           
+0     0000b2c0  gi_Vac_Filter                    
+0     0000b2d2  VDC_NOTCH_FILTER_2_Fe            
+0     0000b2e4  gi_ACDC_pi                       
+0     0000b300  gv_ACDC_pi                       
+0     0000b316  uINV_DCDC_started                
+0     0000b317  uINV_DCDC_clearPWMTrip           
+0     0000b31a  uINV_DCDC_mppt_counter           
+0     0000b31c  uINV_DCDC_Flag_Slew              
+0     0000b31e  uINV_DCDC_Current_Protection_1   
+0     0000b320  uINV_DCDC_Current_Protection_2   
+0     0000b322  uINV_DCDC_Current_Protection_3   
+0     0000b324  uINV_DCDC_Current_Protection_4   
+0     0000b326  uINV_DCDC_Voltage_Protection_1   
+0     0000b328  uINV_DCDC_Voltage_Protection_2   
+0     0000b32a  uINV_DCDC_Voltage_Protection_3   
+0     0000b32c  uINV_DCDC_Voltage_Protection_4   
+0     0000b32e  uINV_DCDC_Overvoltage            
+0     0000b330  sr_coef                          
+0     0000d000  FPU32LOG2                        
+0     0000d002  FPU32INVLOG10                    
+0     0000d004  FPU32EXPBIAS                     
+0     0000d006  FPU32LOG_TABLE_MASK1             
+0     0000d008  FPU32LOG_TABLE_MASK2             
+0     0000d00a  FPU32logTable                    
+0     0000d0d0  FPU32expTableCoeff               
+0     0000d0d0  FPU32logTableEnd                 
+0     0000d0dc  FPU32expTable                    
+0     0000d0dc  FPU32expTableCoeffEnd            
+0     0000d18e  FPU32expTableEnd                 
+0     0000e000  DCL_runDF22_C1                   
+0     0000f000  ISR2                             
+0     0000f76e  ISR1                             
+0     0000fe54  ISR3                             
+0     0000fe91  SysCtl_delay                     
+0     00080000  code_start                       
+0     00080008  __TI_BINIT_Base                  
+0     00080008  __TI_table_binit                 
+0     0008001c  __TI_BINIT_Limit                 
+0     00081f00  __TI_Handler_Table_Base          
+0     00081f06  __TI_Handler_Table_Limit         
+0     00081f22  __TI_CINIT_Base                  
+0     00081f4e  __TI_CINIT_Limit                 
+0     00081f4e  __TI_CINIT_Warm                  
+0     00082000  EPWM_init                        
+0     00082df0  __TI_printfi                     
+0     00082f75  myECAP0_init                     
+0     000836c2  SYSCTL_init                      
+0     00083a63  uINV_DCAC_GlobalVariablesInit    
+0     00083fa5  frexp                            
+0     00083fa5  frexpl                           
+0     00083fff  C2000Ware_libraries_init         
+0     00084000  _ctypes_                         
+0     00084340  PinMux_init                      
+0     00084521  uINV_DCDC_test                   
+0     000846e1  A1                               
+0     00084814  SysCtl_setClock                  
+0     00084931  __c28xabi_divll                  
+0     0008496d  __c28xabi_modll                  
+0     000849a7  __c28xabi_divull                 
+0     000849d6  __c28xabi_modull                 
+0     00084a38  uINV_DCAC_GaN_temp               
+0     00084b3f  uINV_StartConverters             
+0     00084c2c  SysCtl_isPLLValid                
+0     00084dfe  GPIO_init                        
+0     00084ee1  solar_uinverter_to_string        
+0     00084faf  uINV_comms_init                  
+0     00084ffa  __TI_zero_init                   
+0     00085000  uINV_DCAC_test                   
+0     000850cb  ADC_B_init                       
+0     00085193  uINV_comms_update_data           
+0     00085258  ADC_C_init                       
+0     00085318  checkPanels_ON_OFF               
+0     000853cf  ldexp                            
+0     000853cf  ldexpl                           
+0     000853cf  scalbn                           
+0     000853cf  scalbnl                          
+0     0008547b  powf                             
+0     0008551b  __c28xabi_addd                   
+0     000855b7  CMPSS_SR_init                    
+0     000856e2  uINV_Check                       
+0     00085772  ADC_A_init                       
+0     00085800  Board_init                       
+0     0008588e  __c28xabi_divd                   
+0     00085919  __c28xabi_divf                   
+0     000859a1  myCMPSS_init                     
+0     00085a28  uINV_DCAC_Init                   
+0     00085aaf  __c28xabi_mpyd                   
+0     00085b32  uINV_StopBoost                   
+0     00085bb5  computeDF22_PRcontrollerCoeff    
+0     00085c27  computeDF22_NotchFltrCoeff       
+0     00085c95  SCI_COMMS_init                   
+0     00085cfe  main                             
+0     00085d67  tanf                             
+0     00085dc7  Device_init                      
+0     00085e23  SysCtl_getClock                  
+0     00085e7c  uINV_DCDC_fail                   
+0     00085ed1  GPIO_setAnalogMode               
+0     00085f16  SysCtl_selectXTAL                
+0     00085fe0  GPIO_setDirectionMode            
+0     000861d2  Interrupt_initModule             
+0     00086295  GPIO_setPadConfig                
+0     00086312  uINV_comms_test                  
+0     0008634d  uINV_SystemInit                  
+0     000863bf  uINV_controller_PLC              
+0     000863f7  Interrupt_enable                 
+0     0008642d  __TI_auto_init_nopinit           
+0     00086461  sprintf                          
+0     00086493  atoi                             
+0     000864c4  uINV_StopConversion              
+0     000864f5  GPIO_setPinConfig                
+0     00086525  __TI_decompress_lzss             
+0     00086555  __TI_ltoa                        
+0     00086585  copy_in                          
+0     000865b5  uINV_WaitPanels                  
+0     000865e3  SysCtl_selectOscSource           
+0     00086610  XBAR_setEPWMMuxConfig            
+0     0008663b  __c28xabi_cmpd                   
+0     00086665  __c28xabi_divl                   
+0     00086674  __c28xabi_modl                   
+0     00086682  __c28xabi_divul                  
+0     00086689  __c28xabi_modul                  
+0     0008668f  C$$EXIT                          
+0     0008668f  abort                            
+0     00086691  exit                             
+0     000866b8  myCLB0_init                      
+0     000866df  uINV_comms_send                  
+0     00086705  copysign                         
+0     00086705  copysignl                        
+0     00086729  SCI_setConfig                    
+0     0008674c  GPIO_setControllerCore           
+0     0008676e  GPIO_setQualificationMode        
+0     00086790  SCI_writeCharArray               
+0     000867b2  __c28xabi_divi                   
+0     000867c3  __c28xabi_modi                   
+0     000867d4  SysCtl_selectXTALSingleEnded     
+0     000867f5  __c28xabi_dtoi                   
+0     00086816  CMPSS_configRamp                 
+0     00086835  __c28xabi_dtol                   
+0     00086854  __c28xabi_cmpll                  
+0     00086866  __c28xabi_cmpull                 
+0     00086872  __c28xabi_itod                   
+0     0008688f  memcpy                           
+0     000868ac  SCI_clearInterruptStatus         
+0     000868c8  __c28xabi_ltod                   
+0     000868e4  ADC_setOffsetTrimAll             
+0     000868fe  ADC_setVREF                      
+0     00086917  CMPSS_configFilterHigh           
+0     00086930  CMPSS_configFilterLow            
+0     00086949  __c28xabi_andll                  
+0     00086951  __c28xabi_orll                   
+0     00086959  __c28xabi_xorll                  
+0     00086961  _c_int00                         
+0     00086978  uINV_DCDC_init                   
+0     0008698f  CMPSS_configLatchOnPWMSYNC       
+0     000869a4  Interrupt_initVectorTable        
+0     000869b9  SysCtl_getLowSpeedClock          
+0     000869ce  SysCtl_configureType             
+0     000869f3  Device_initGPIO                  
+0     00086a03  memccpy                          
+0     00086a13  __c28xabi_subd                   
+0     00086a21  ECAP_setEmulationMode            
+0     00086a2e  Interrupt_defaultHandler         
+0     00086a3a  _args_main                       
+0     00086a46  strchr                           
+0     00086a52  wcslen                           
+0     00086a5d  A0                               
+0     00086a67  B0                               
+0     00086a71  Interrupt_illegalOperationHandler
+0     00086a7b  Interrupt_nmiHandler             
+0     00086a85  EPWM_setEmulationMode            
+0     00086a8e  __c28xabi_negd                   
+0     00086a97  B1                               
+0     00086a9f  B2                               
+0     00086aa7  B3                               
+0     00086aaf  __TI_decompress_none             
+0     00086abf  strlen                           
+0     00086ac7  memset                           
+0     00086ace  strcpy                           
+0     00086ad3  __error__                        
+0     00086ad6  _system_pre_init                 
+0     00086ad8  CMD_init                         
+0     00086ad9  _nop                             
+0     00086ada  _system_post_cinit               
+abs   00000200  __TI_STACK_SIZE                  
+abs   ffffffff  __TI_pprof_out_hndl              
+abs   ffffffff  __TI_prof_data_size              
+abs   ffffffff  __TI_prof_data_start             
+n/a   UNDEFED   __c_args__                       
+
+[419 symbols]
